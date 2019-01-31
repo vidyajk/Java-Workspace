@@ -1,0 +1,27 @@
+<div class="panel">
+
+  <div class="panel-heading">{{title}}</div>
+  <div class="panel-body">
+    <button (click)="loadProducts()">showProducts</button>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of products">
+            <td>{{p.id}}</td>
+            <td>{{p.name | uppercase}}</td>
+            <td>{{p.price | currency}}</td>
+            <td>{{p.quantity}}</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
